@@ -8,4 +8,4 @@ executable_jar_name=${project.name}-${project.version}.jar
 
 cd $basedir || exit
 nohup /bin/java -Dlog.dir=$logdir -jar $basedir/lib/$executable_jar_name >/dev/null 2>&1 &
-echo $! >$basedir/acckeeper.pid
+echo $! >$basedir/prorepo.pid
