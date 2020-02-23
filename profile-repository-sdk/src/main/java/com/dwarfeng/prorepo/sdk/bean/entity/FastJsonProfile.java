@@ -32,82 +32,82 @@ public class FastJsonProfile implements Bean {
     @JSONField(name = "telephone_number", ordinal = 6)
     private String telephoneNumber;
 
-    @JSONField(name = "www_homepage", ordinal = 6)
+    @JSONField(name = "www_homepage", ordinal = 7)
     private String wwwHomepage;
 
-    @JSONField(name = "email", ordinal = 7)
+    @JSONField(name = "email", ordinal = 8)
     private String email;
 
-    @JSONField(name = "country", ordinal = 8)
+    @JSONField(name = "country", ordinal = 9)
     private String country;
 
-    @JSONField(name = "province", ordinal = 9)
+    @JSONField(name = "province", ordinal = 10)
     private String province;
 
-    @JSONField(name = "city", ordinal = 10)
+    @JSONField(name = "city", ordinal = 11)
     private String city;
 
-    @JSONField(name = "street", ordinal = 11)
+    @JSONField(name = "street", ordinal = 12)
     private String street;
 
-    @JSONField(name = "consignee_address", ordinal = 12)
+    @JSONField(name = "consignee_address", ordinal = 13)
     private String consigneeAddress;
 
-    @JSONField(name = "fax_number", ordinal = 13)
+    @JSONField(name = "fax_number", ordinal = 14)
     private String faxNumber;
 
-    @JSONField(name = "identity_card_number", ordinal = 14)
+    @JSONField(name = "identity_card_number", ordinal = 15)
     private String identityCardNumber;
 
-    @JSONField(name = "identity_card_number", ordinal = 15)
-    private byte identityCardType;
+    @JSONField(name = "identity_card_type", ordinal = 16)
+    private Byte identityCardType;
 
-    @JSONField(name = "birth_year", ordinal = 16)
-    private int birthYear;
+    @JSONField(name = "birth_year", ordinal = 17)
+    private Integer birthYear;
 
-    @JSONField(name = "birth_month", ordinal = 17)
-    private int birthMonth;
+    @JSONField(name = "birth_month", ordinal = 18)
+    private Integer birthMonth;
 
-    @JSONField(name = "birth_day", ordinal = 18)
-    private int birthDay;
+    @JSONField(name = "birth_day", ordinal = 19)
+    private Integer birthDay;
 
-    @JSONField(name = "gender", ordinal = 19)
-    private byte gender;
+    @JSONField(name = "gender", ordinal = 20)
+    private Byte gender;
 
-    @JSONField(name = "bank_account", ordinal = 20)
+    @JSONField(name = "bank_account", ordinal = 21)
     private String bankAccount;
 
-    @JSONField(name = "blood_type", ordinal = 21)
-    private byte bloodType;
+    @JSONField(name = "blood_type", ordinal = 22)
+    private Byte bloodType;
 
-    @JSONField(name = "ebg", ordinal = 22)
-    private byte ebg;
+    @JSONField(name = "ebg", ordinal = 23)
+    private Byte ebg;
 
-    @JSONField(name = "strong_point", ordinal = 23)
+    @JSONField(name = "strong_point", ordinal = 24)
     private String strongPoint;
 
-    @JSONField(name = "hobby", ordinal = 24)
+    @JSONField(name = "hobby", ordinal = 25)
     private String hobby;
 
-    @JSONField(name = "motd", ordinal = 25)
+    @JSONField(name = "motd", ordinal = 26)
     private String motd;
 
-    @JSONField(name = "profession", ordinal = 26)
+    @JSONField(name = "profession", ordinal = 27)
     private String profession;
 
-    @JSONField(name = "job_title", ordinal = 27)
+    @JSONField(name = "job_title", ordinal = 28)
     private String jobTitle;
 
-    @JSONField(name = "marital_status", ordinal = 28)
-    private byte maritalStatus;
+    @JSONField(name = "marital_status", ordinal = 29)
+    private Byte maritalStatus;
 
-    @JSONField(name = "state_of_health", ordinal = 29)
+    @JSONField(name = "state_of_health", ordinal = 30)
     private String stateOfHealth;
 
-    @JSONField(name = "rank", ordinal = 30)
-    private byte rank;
+    @JSONField(name = "rank", ordinal = 31)
+    private Byte rank;
 
-    @JSONField(name = "remark", ordinal = 31)
+    @JSONField(name = "remark", ordinal = 32)
     private String remark;
 
     public FastJsonProfile() {
@@ -116,10 +116,10 @@ public class FastJsonProfile implements Bean {
     public FastJsonProfile(
             StringIdKey key, String sn, String givenName, String initials, String displayName, String telephoneNumber,
             String wwwHomepage, String email, String country, String province, String city, String street,
-            String consigneeAddress, String faxNumber, String identityCardNumber, byte identityCardType, int birthYear,
-            int birthMonth, int birthDay, byte gender, String bankAccount, byte bloodType, byte ebg, String strongPoint,
-            String hobby, String motd, String profession, String jobTitle, byte maritalStatus, String stateOfHealth,
-            byte rank, String remark) {
+            String consigneeAddress, String faxNumber, String identityCardNumber, Byte identityCardType, Integer birthYear,
+            Integer birthMonth, Integer birthDay, Byte gender, String bankAccount, Byte bloodType, Byte ebg, String strongPoint,
+            String hobby, String motd, String profession, String jobTitle, Byte maritalStatus, String stateOfHealth,
+            Byte rank, String remark) {
         this.key = key;
         this.sn = sn;
         this.givenName = givenName;
@@ -274,43 +274,43 @@ public class FastJsonProfile implements Bean {
         this.identityCardNumber = identityCardNumber;
     }
 
-    public byte getIdentityCardType() {
+    public Byte getIdentityCardType() {
         return identityCardType;
     }
 
-    public void setIdentityCardType(byte identityCardType) {
+    public void setIdentityCardType(Byte identityCardType) {
         this.identityCardType = identityCardType;
     }
 
-    public int getBirthYear() {
+    public Integer getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(Integer birthYear) {
         this.birthYear = birthYear;
     }
 
-    public int getBirthMonth() {
+    public Integer getBirthMonth() {
         return birthMonth;
     }
 
-    public void setBirthMonth(int birthMonth) {
+    public void setBirthMonth(Integer birthMonth) {
         this.birthMonth = birthMonth;
     }
 
-    public int getBirthDay() {
+    public Integer getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(int birthDay) {
+    public void setBirthDay(Integer birthDay) {
         this.birthDay = birthDay;
     }
 
-    public byte getGender() {
+    public Byte getGender() {
         return gender;
     }
 
-    public void setGender(byte gender) {
+    public void setGender(Byte gender) {
         this.gender = gender;
     }
 
@@ -322,19 +322,19 @@ public class FastJsonProfile implements Bean {
         this.bankAccount = bankAccount;
     }
 
-    public byte getBloodType() {
+    public Byte getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(byte bloodType) {
+    public void setBloodType(Byte bloodType) {
         this.bloodType = bloodType;
     }
 
-    public byte getEbg() {
+    public Byte getEbg() {
         return ebg;
     }
 
-    public void setEbg(byte ebg) {
+    public void setEbg(Byte ebg) {
         this.ebg = ebg;
     }
 
@@ -378,11 +378,11 @@ public class FastJsonProfile implements Bean {
         this.jobTitle = jobTitle;
     }
 
-    public byte getMaritalStatus() {
+    public Byte getMaritalStatus() {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(byte maritalStatus) {
+    public void setMaritalStatus(Byte maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -394,11 +394,11 @@ public class FastJsonProfile implements Bean {
         this.stateOfHealth = stateOfHealth;
     }
 
-    public byte getRank() {
+    public Byte getRank() {
         return rank;
     }
 
-    public void setRank(byte rank) {
+    public void setRank(Byte rank) {
         this.rank = rank;
     }
 

@@ -91,27 +91,27 @@ public class Profile implements Entity<StringIdKey> {
     /**
      * 身份证件类型。
      */
-    private byte identityCardType;
+    private Byte identityCardType;
 
     /**
      * 出生年份。
      */
-    private int birthYear;
+    private Integer birthYear;
 
     /**
      * 出生月份。
      */
-    private int birthMonth;
+    private Integer birthMonth;
 
     /**
      * 出生日份。
      */
-    private int birthDay;
+    private Integer birthDay;
 
     /**
      * 性别。
      */
-    private byte gender;
+    private Byte gender;
 
     /**
      * 银行账户。
@@ -121,12 +121,12 @@ public class Profile implements Entity<StringIdKey> {
     /**
      * 血型。
      */
-    private byte bloodType;
+    private Byte bloodType;
 
     /**
      * 教育背景。
      */
-    private byte ebg;
+    private Byte ebg;
 
     /**
      * 特长。
@@ -156,7 +156,7 @@ public class Profile implements Entity<StringIdKey> {
     /**
      * 婚姻状况。
      */
-    private byte maritalStatus;
+    private Byte maritalStatus;
 
     /**
      * 健康状况。
@@ -166,7 +166,7 @@ public class Profile implements Entity<StringIdKey> {
     /**
      * 等级。
      */
-    private byte rank;
+    private Byte rank;
 
     /**
      * 备注。
@@ -179,10 +179,10 @@ public class Profile implements Entity<StringIdKey> {
     public Profile(
             StringIdKey key, String sn, String givenName, String initials, String displayName, String telephoneNumber,
             String wwwHomepage, String email, String country, String province, String city, String street,
-            String consigneeAddress, String faxNumber, String identityCardNumber, byte identityCardType, int birthYear,
-            int birthMonth, int birthDay, byte gender, String bankAccount, byte bloodType, byte ebg, String strongPoint,
-            String hobby, String motd, String profession, String jobTitle, byte maritalStatus, String stateOfHealth,
-            byte rank, String remark) {
+            String consigneeAddress, String faxNumber, String identityCardNumber, Byte identityCardType, Integer birthYear,
+            Integer birthMonth, Integer birthDay, Byte gender, String bankAccount, Byte bloodType, Byte ebg, String strongPoint,
+            String hobby, String motd, String profession, String jobTitle, Byte maritalStatus, String stateOfHealth,
+            Byte rank, String remark) {
         this.key = key;
         this.sn = sn;
         this.givenName = givenName;
@@ -339,43 +339,43 @@ public class Profile implements Entity<StringIdKey> {
         this.identityCardNumber = identityCardNumber;
     }
 
-    public byte getIdentityCardType() {
+    public Byte getIdentityCardType() {
         return identityCardType;
     }
 
-    public void setIdentityCardType(byte identityCardType) {
+    public void setIdentityCardType(Byte identityCardType) {
         this.identityCardType = identityCardType;
     }
 
-    public int getBirthYear() {
+    public Integer getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(Integer birthYear) {
         this.birthYear = birthYear;
     }
 
-    public int getBirthMonth() {
+    public Integer getBirthMonth() {
         return birthMonth;
     }
 
-    public void setBirthMonth(int birthMonth) {
+    public void setBirthMonth(Integer birthMonth) {
         this.birthMonth = birthMonth;
     }
 
-    public int getBirthDay() {
+    public Integer getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(int birthDay) {
+    public void setBirthDay(Integer birthDay) {
         this.birthDay = birthDay;
     }
 
-    public byte getGender() {
+    public Byte getGender() {
         return gender;
     }
 
-    public void setGender(byte gender) {
+    public void setGender(Byte gender) {
         this.gender = gender;
     }
 
@@ -387,19 +387,19 @@ public class Profile implements Entity<StringIdKey> {
         this.bankAccount = bankAccount;
     }
 
-    public byte getBloodType() {
+    public Byte getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(byte bloodType) {
+    public void setBloodType(Byte bloodType) {
         this.bloodType = bloodType;
     }
 
-    public byte getEbg() {
+    public Byte getEbg() {
         return ebg;
     }
 
-    public void setEbg(byte ebg) {
+    public void setEbg(Byte ebg) {
         this.ebg = ebg;
     }
 
@@ -443,11 +443,11 @@ public class Profile implements Entity<StringIdKey> {
         this.jobTitle = jobTitle;
     }
 
-    public byte getMaritalStatus() {
+    public Byte getMaritalStatus() {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(byte maritalStatus) {
+    public void setMaritalStatus(Byte maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -459,11 +459,11 @@ public class Profile implements Entity<StringIdKey> {
         this.stateOfHealth = stateOfHealth;
     }
 
-    public byte getRank() {
+    public Byte getRank() {
         return rank;
     }
 
-    public void setRank(byte rank) {
+    public void setRank(Byte rank) {
         this.rank = rank;
     }
 

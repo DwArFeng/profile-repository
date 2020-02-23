@@ -1,14 +1,14 @@
 package com.dwarfeng.prorepo.impl.bean.entity;
 
 import com.dwarfeng.prorepo.sdk.util.ProfileConstraints;
+import com.dwarfeng.subgrade.sdk.bean.key.HibernateStringIdKey;
 import com.dwarfeng.subgrade.stack.bean.Bean;
-import com.dwarfeng.subgrade.stack.bean.key.StringIdKey;
 
 import javax.persistence.*;
 import java.util.Optional;
 
 @Entity
-@IdClass(StringIdKey.class)
+@IdClass(HibernateStringIdKey.class)
 @Table(name = "tbl_profile")
 public class HibernateProfile implements Bean {
 
@@ -63,28 +63,28 @@ public class HibernateProfile implements Bean {
     private String identityCardNumber;
 
     @Column(name = "identity_card_type")
-    private byte identityCardType;
+    private Byte identityCardType;
 
     @Column(name = "birth_year")
-    private int birthYear;
+    private Integer birthYear;
 
     @Column(name = "birth_month")
-    private int birthMonth;
+    private Integer birthMonth;
 
     @Column(name = "birth_day")
-    private int birthDay;
+    private Integer birthDay;
 
     @Column(name = "gender")
-    private byte gender;
+    private Byte gender;
 
     @Column(name = "bank_account", columnDefinition = "VARCHAR(" + ProfileConstraints.BANK_ACCOUNT_LENGTH + ")")
     private String bankAccount;
 
     @Column(name = "blood_type")
-    private byte bloodType;
+    private Byte bloodType;
 
     @Column(name = "ebg")
-    private byte ebg;
+    private Byte ebg;
 
     @Column(name = "strong_point", columnDefinition = "VARCHAR(" + ProfileConstraints.STRONG_POINT_LENGTH + ")")
     private String strongPoint;
@@ -102,13 +102,13 @@ public class HibernateProfile implements Bean {
     private String jobTitle;
 
     @Column(name = "marital_status")
-    private byte maritalStatus;
+    private Byte maritalStatus;
 
-    @Column(name = "marital_status", columnDefinition = "VARCHAR(" + ProfileConstraints.STATE_OF_HEALTH_LENGTH + ")")
+    @Column(name = "state_of_health", columnDefinition = "VARCHAR(" + ProfileConstraints.STATE_OF_HEALTH_LENGTH + ")")
     private String stateOfHealth;
 
     @Column(name = "rank")
-    private byte rank;
+    private Byte rank;
 
     @Column(name = "remark", columnDefinition = "VARCHAR(" + ProfileConstraints.REMARK_LENGTH + ")")
     private String remark;
@@ -116,12 +116,12 @@ public class HibernateProfile implements Bean {
     public HibernateProfile() {
     }
 
-    public StringIdKey getKey() {
-        return new StringIdKey(this.stringId);
+    public HibernateStringIdKey getKey() {
+        return new HibernateStringIdKey(this.stringId);
     }
 
-    public void setKey(StringIdKey key) {
-        this.stringId = Optional.ofNullable(key).map(StringIdKey::getStringId).orElse(null);
+    public void setKey(HibernateStringIdKey key) {
+        this.stringId = Optional.ofNullable(key).map(HibernateStringIdKey::getStringId).orElse(null);
     }
 
     public String getStringId() {
@@ -244,43 +244,43 @@ public class HibernateProfile implements Bean {
         this.identityCardNumber = identityCardNumber;
     }
 
-    public byte getIdentityCardType() {
+    public Byte getIdentityCardType() {
         return identityCardType;
     }
 
-    public void setIdentityCardType(byte identityCardType) {
+    public void setIdentityCardType(Byte identityCardType) {
         this.identityCardType = identityCardType;
     }
 
-    public int getBirthYear() {
+    public Integer getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(Integer birthYear) {
         this.birthYear = birthYear;
     }
 
-    public int getBirthMonth() {
+    public Integer getBirthMonth() {
         return birthMonth;
     }
 
-    public void setBirthMonth(int birthMonth) {
+    public void setBirthMonth(Integer birthMonth) {
         this.birthMonth = birthMonth;
     }
 
-    public int getBirthDay() {
+    public Integer getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(int birthDay) {
+    public void setBirthDay(Integer birthDay) {
         this.birthDay = birthDay;
     }
 
-    public byte getGender() {
+    public Byte getGender() {
         return gender;
     }
 
-    public void setGender(byte gender) {
+    public void setGender(Byte gender) {
         this.gender = gender;
     }
 
@@ -292,19 +292,19 @@ public class HibernateProfile implements Bean {
         this.bankAccount = bankAccount;
     }
 
-    public byte getBloodType() {
+    public Byte getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(byte bloodType) {
+    public void setBloodType(Byte bloodType) {
         this.bloodType = bloodType;
     }
 
-    public byte getEbg() {
+    public Byte getEbg() {
         return ebg;
     }
 
-    public void setEbg(byte ebg) {
+    public void setEbg(Byte ebg) {
         this.ebg = ebg;
     }
 
@@ -348,11 +348,11 @@ public class HibernateProfile implements Bean {
         this.jobTitle = jobTitle;
     }
 
-    public byte getMaritalStatus() {
+    public Byte getMaritalStatus() {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(byte maritalStatus) {
+    public void setMaritalStatus(Byte maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
@@ -364,11 +364,11 @@ public class HibernateProfile implements Bean {
         this.stateOfHealth = stateOfHealth;
     }
 
-    public byte getRank() {
+    public Byte getRank() {
         return rank;
     }
 
-    public void setRank(byte rank) {
+    public void setRank(Byte rank) {
         this.rank = rank;
     }
 
