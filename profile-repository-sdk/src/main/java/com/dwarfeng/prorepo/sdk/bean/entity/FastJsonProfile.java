@@ -1,182 +1,119 @@
-package com.dwarfeng.prorepo.stack.bean.entity;
+package com.dwarfeng.prorepo.sdk.bean.entity;
 
-import com.dwarfeng.subgrade.stack.bean.entity.Entity;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.dwarfeng.subgrade.stack.bean.Bean;
 import com.dwarfeng.subgrade.stack.bean.key.StringIdKey;
 
 /**
- * 用户档案。
+ * FastJson用户档案。
  *
  * @author DwArFeng
  * @since alpha-0.0.1
  */
-public class Profile implements Entity<StringIdKey> {
+public class FastJsonProfile implements Bean {
 
-    private static final long serialVersionUID = 1202269147083080132L;
-
-    /**
-     * 主键。
-     */
+    private static final long serialVersionUID = -1012777186493254644L;
+    
+    @JSONField(name = "key", ordinal = 1)
     private StringIdKey key;
 
-    /**
-     * 姓。
-     */
+    @JSONField(name = "sn", ordinal = 2)
     private String sn;
 
-    /**
-     * 名。
-     */
+    @JSONField(name = "given_name", ordinal = 3)
     private String givenName;
 
-    /**
-     * 英文缩写。
-     */
+    @JSONField(name = "initials", ordinal = 4)
     private String initials;
 
-    /**
-     * 显示名称。
-     */
+    @JSONField(name = "display_name", ordinal = 5)
     private String displayName;
 
-    /**
-     * 手机号。
-     */
+    @JSONField(name = "telephone_number", ordinal = 6)
     private String telephoneNumber;
 
-    /**
-     * 个人主页。
-     */
+    @JSONField(name = "www_homepage", ordinal = 6)
     private String wwwHomepage;
 
-    /**
-     * 电子邮箱号。
-     */
+    @JSONField(name = "email", ordinal = 7)
     private String email;
 
-    /**
-     * 国家。
-     */
+    @JSONField(name = "country", ordinal = 8)
     private String country;
 
-    /**
-     * 省。
-     */
+    @JSONField(name = "province", ordinal = 9)
     private String province;
 
-    /**
-     * 市。
-     */
+    @JSONField(name = "city", ordinal = 10)
     private String city;
 
-    /**
-     * 街道。
-     */
+    @JSONField(name = "street", ordinal = 11)
     private String street;
 
-    /**
-     * 收件地址。
-     */
+    @JSONField(name = "consignee_address", ordinal = 12)
     private String consigneeAddress;
 
-    /**
-     * 传真号码。
-     */
+    @JSONField(name = "fax_number", ordinal = 13)
     private String faxNumber;
 
-    /**
-     * 身份证件号码。
-     */
+    @JSONField(name = "identity_card_number", ordinal = 14)
     private String identityCardNumber;
 
-    /**
-     * 身份证件类型。
-     */
+    @JSONField(name = "identity_card_number", ordinal = 15)
     private byte identityCardType;
 
-    /**
-     * 出生年份。
-     */
+    @JSONField(name = "birth_year", ordinal = 16)
     private int birthYear;
 
-    /**
-     * 出生月份。
-     */
+    @JSONField(name = "birth_month", ordinal = 17)
     private int birthMonth;
 
-    /**
-     * 出生日份。
-     */
+    @JSONField(name = "birth_day", ordinal = 18)
     private int birthDay;
 
-    /**
-     * 性别。
-     */
+    @JSONField(name = "gender", ordinal = 19)
     private byte gender;
 
-    /**
-     * 银行账户。
-     */
+    @JSONField(name = "bank_account", ordinal = 20)
     private String bankAccount;
 
-    /**
-     * 血型。
-     */
+    @JSONField(name = "blood_type", ordinal = 21)
     private byte bloodType;
 
-    /**
-     * 教育背景。
-     */
+    @JSONField(name = "ebg", ordinal = 22)
     private byte ebg;
 
-    /**
-     * 特长。
-     */
+    @JSONField(name = "strong_point", ordinal = 23)
     private String strongPoint;
 
-    /**
-     * 爱好。
-     */
+    @JSONField(name = "hobby", ordinal = 24)
     private String hobby;
 
-    /**
-     * 每日提示（格言/个性签名）。
-     */
+    @JSONField(name = "motd", ordinal = 25)
     private String motd;
 
-    /**
-     * 职业。
-     */
+    @JSONField(name = "profession", ordinal = 26)
     private String profession;
 
-    /**
-     * 职称。
-     */
+    @JSONField(name = "job_title", ordinal = 27)
     private String jobTitle;
 
-    /**
-     * 婚姻状况。
-     */
+    @JSONField(name = "marital_status", ordinal = 28)
     private String maritalStatus;
 
-    /**
-     * 健康状况。
-     */
+    @JSONField(name = "state_of_health", ordinal = 29)
     private String stateOfHealth;
 
-    /**
-     * 等级。
-     */
+    @JSONField(name = "rank", ordinal = 30)
     private byte rank;
 
-    /**
-     * 备注。
-     */
+    @JSONField(name = "remark", ordinal = 31)
     private String remark;
 
-    public Profile() {
+    public FastJsonProfile() {
     }
 
-    public Profile(
+    public FastJsonProfile(
             StringIdKey key, String sn, String givenName, String initials, String displayName, String telephoneNumber,
             String wwwHomepage, String email, String country, String province, String city, String street,
             String consigneeAddress, String faxNumber, String identityCardNumber, byte identityCardType, int birthYear,
@@ -217,12 +154,10 @@ public class Profile implements Entity<StringIdKey> {
         this.remark = remark;
     }
 
-    @Override
     public StringIdKey getKey() {
         return key;
     }
 
-    @Override
     public void setKey(StringIdKey key) {
         this.key = key;
     }
@@ -477,7 +412,7 @@ public class Profile implements Entity<StringIdKey> {
 
     @Override
     public String toString() {
-        return "Profile{" +
+        return "FastJsonProfile{" +
                 "key=" + key +
                 ", sn='" + sn + '\'' +
                 ", givenName='" + givenName + '\'' +
