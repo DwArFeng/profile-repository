@@ -1,165 +1,135 @@
-package com.dwarfeng.prorepo.sdk.bean.entity;
+package com.dwarfeng.prorepo.impl.bean.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
+import com.dwarfeng.prorepo.sdk.util.ProfileConstraints;
 import com.dwarfeng.subgrade.stack.bean.Bean;
 import com.dwarfeng.subgrade.stack.bean.key.StringIdKey;
 
-/**
- * FastJson用户档案。
- *
- * @author DwArFeng
- * @since alpha-0.0.1
- */
-public class FastJsonProfile implements Bean {
+import javax.persistence.*;
+import java.util.Optional;
 
-    private static final long serialVersionUID = -1012777186493254644L;
+@Entity
+@IdClass(StringIdKey.class)
+@Table(name = "tbl_profile")
+public class HibernateProfile implements Bean {
 
-    @JSONField(name = "key", ordinal = 1)
-    private StringIdKey key;
+    private static final long serialVersionUID = -647610156940290188L;
 
-    @JSONField(name = "sn", ordinal = 2)
+    // -----------------------------------------------------------主键-----------------------------------------------------------
+    @Id
+    @Column(name = "id", columnDefinition = "VARCHAR(" + ProfileConstraints.KEY_LENGTH + ")", nullable = false, unique = true)
+    private String stringId;
+
+    // -----------------------------------------------------------主属性字段-----------------------------------------------------------
+    @Column(name = "sn", columnDefinition = "VARCHAR(" + ProfileConstraints.SN_LENGTH + ")")
     private String sn;
 
-    @JSONField(name = "given_name", ordinal = 3)
+    @Column(name = "given_name", columnDefinition = "VARCHAR(" + ProfileConstraints.GIVEN_NAME_LENGTH + ")")
     private String givenName;
 
-    @JSONField(name = "initials", ordinal = 4)
+    @Column(name = "initials", columnDefinition = "VARCHAR(" + ProfileConstraints.INITIALS_LENGTH + ")")
     private String initials;
 
-    @JSONField(name = "display_name", ordinal = 5)
+    @Column(name = "display_name", columnDefinition = "VARCHAR(" + ProfileConstraints.DISPLAY_NAME_LENGTH + ")")
     private String displayName;
 
-    @JSONField(name = "telephone_number", ordinal = 6)
+    @Column(name = "telephone_number", columnDefinition = "VARCHAR(" + ProfileConstraints.TELEPHONE_NUMBER_LENGTH + ")")
     private String telephoneNumber;
 
-    @JSONField(name = "www_homepage", ordinal = 6)
+    @Column(name = "www_homepage", columnDefinition = "VARCHAR(" + ProfileConstraints.WWW_HOMEPAGE_LENGTH + ")")
     private String wwwHomepage;
 
-    @JSONField(name = "email", ordinal = 7)
+    @Column(name = "email", columnDefinition = "VARCHAR(" + ProfileConstraints.EMAIL_LENGTH + ")")
     private String email;
 
-    @JSONField(name = "country", ordinal = 8)
+    @Column(name = "country", columnDefinition = "VARCHAR(" + ProfileConstraints.COUNTRY_LENGTH + ")")
     private String country;
 
-    @JSONField(name = "province", ordinal = 9)
+    @Column(name = "province", columnDefinition = "VARCHAR(" + ProfileConstraints.PROVINCE_LENGTH + ")")
     private String province;
 
-    @JSONField(name = "city", ordinal = 10)
+    @Column(name = "city", columnDefinition = "VARCHAR(" + ProfileConstraints.CITY_LENGTH + ")")
     private String city;
 
-    @JSONField(name = "street", ordinal = 11)
+    @Column(name = "street", columnDefinition = "VARCHAR(" + ProfileConstraints.STREET_LENGTH + ")")
     private String street;
 
-    @JSONField(name = "consignee_address", ordinal = 12)
+    @Column(name = "consignee_address", columnDefinition = "VARCHAR(" + ProfileConstraints.CONSIGNEE_ADDRESS_LENGTH + ")")
     private String consigneeAddress;
 
-    @JSONField(name = "fax_number", ordinal = 13)
+    @Column(name = "fax_number", columnDefinition = "VARCHAR(" + ProfileConstraints.FAX_NUMBER_LENGTH + ")")
     private String faxNumber;
 
-    @JSONField(name = "identity_card_number", ordinal = 14)
+    @Column(name = "identity_card_number", columnDefinition = "VARCHAR(" + ProfileConstraints.IDENTITY_CARD_NUMBER_LENGTH + ")")
     private String identityCardNumber;
 
-    @JSONField(name = "identity_card_number", ordinal = 15)
+    @Column(name = "identity_card_type")
     private byte identityCardType;
 
-    @JSONField(name = "birth_year", ordinal = 16)
+    @Column(name = "birth_year")
     private int birthYear;
 
-    @JSONField(name = "birth_month", ordinal = 17)
+    @Column(name = "birth_month")
     private int birthMonth;
 
-    @JSONField(name = "birth_day", ordinal = 18)
+    @Column(name = "birth_day")
     private int birthDay;
 
-    @JSONField(name = "gender", ordinal = 19)
+    @Column(name = "gender")
     private byte gender;
 
-    @JSONField(name = "bank_account", ordinal = 20)
+    @Column(name = "bank_account", columnDefinition = "VARCHAR(" + ProfileConstraints.BANK_ACCOUNT_LENGTH + ")")
     private String bankAccount;
 
-    @JSONField(name = "blood_type", ordinal = 21)
+    @Column(name = "blood_type")
     private byte bloodType;
 
-    @JSONField(name = "ebg", ordinal = 22)
+    @Column(name = "ebg")
     private byte ebg;
 
-    @JSONField(name = "strong_point", ordinal = 23)
+    @Column(name = "strong_point", columnDefinition = "VARCHAR(" + ProfileConstraints.STRONG_POINT_LENGTH + ")")
     private String strongPoint;
 
-    @JSONField(name = "hobby", ordinal = 24)
+    @Column(name = "hobby", columnDefinition = "VARCHAR(" + ProfileConstraints.HOBBY_LENGTH + ")")
     private String hobby;
 
-    @JSONField(name = "motd", ordinal = 25)
+    @Column(name = "motd", columnDefinition = "VARCHAR(" + ProfileConstraints.MOTD_LENGTH + ")")
     private String motd;
 
-    @JSONField(name = "profession", ordinal = 26)
+    @Column(name = "profession", columnDefinition = "VARCHAR(" + ProfileConstraints.PROFESSION_LENGTH + ")")
     private String profession;
 
-    @JSONField(name = "job_title", ordinal = 27)
+    @Column(name = "job_title", columnDefinition = "VARCHAR(" + ProfileConstraints.JOB_TITLE_LENGTH + ")")
     private String jobTitle;
 
-    @JSONField(name = "marital_status", ordinal = 28)
+    @Column(name = "marital_status")
     private byte maritalStatus;
 
-    @JSONField(name = "state_of_health", ordinal = 29)
+    @Column(name = "marital_status", columnDefinition = "VARCHAR(" + ProfileConstraints.STATE_OF_HEALTH_LENGTH + ")")
     private String stateOfHealth;
 
-    @JSONField(name = "rank", ordinal = 30)
+    @Column(name = "rank")
     private byte rank;
 
-    @JSONField(name = "remark", ordinal = 31)
+    @Column(name = "remark", columnDefinition = "VARCHAR(" + ProfileConstraints.REMARK_LENGTH + ")")
     private String remark;
 
-    public FastJsonProfile() {
-    }
-
-    public FastJsonProfile(
-            StringIdKey key, String sn, String givenName, String initials, String displayName, String telephoneNumber,
-            String wwwHomepage, String email, String country, String province, String city, String street,
-            String consigneeAddress, String faxNumber, String identityCardNumber, byte identityCardType, int birthYear,
-            int birthMonth, int birthDay, byte gender, String bankAccount, byte bloodType, byte ebg, String strongPoint,
-            String hobby, String motd, String profession, String jobTitle, byte maritalStatus, String stateOfHealth,
-            byte rank, String remark) {
-        this.key = key;
-        this.sn = sn;
-        this.givenName = givenName;
-        this.initials = initials;
-        this.displayName = displayName;
-        this.telephoneNumber = telephoneNumber;
-        this.wwwHomepage = wwwHomepage;
-        this.email = email;
-        this.country = country;
-        this.province = province;
-        this.city = city;
-        this.street = street;
-        this.consigneeAddress = consigneeAddress;
-        this.faxNumber = faxNumber;
-        this.identityCardNumber = identityCardNumber;
-        this.identityCardType = identityCardType;
-        this.birthYear = birthYear;
-        this.birthMonth = birthMonth;
-        this.birthDay = birthDay;
-        this.gender = gender;
-        this.bankAccount = bankAccount;
-        this.bloodType = bloodType;
-        this.ebg = ebg;
-        this.strongPoint = strongPoint;
-        this.hobby = hobby;
-        this.motd = motd;
-        this.profession = profession;
-        this.jobTitle = jobTitle;
-        this.maritalStatus = maritalStatus;
-        this.stateOfHealth = stateOfHealth;
-        this.rank = rank;
-        this.remark = remark;
+    public HibernateProfile() {
     }
 
     public StringIdKey getKey() {
-        return key;
+        return new StringIdKey(this.stringId);
     }
 
     public void setKey(StringIdKey key) {
-        this.key = key;
+        this.stringId = Optional.ofNullable(key).map(StringIdKey::getStringId).orElse(null);
+    }
+
+    public String getStringId() {
+        return stringId;
+    }
+
+    public void setStringId(String stringId) {
+        this.stringId = stringId;
     }
 
     public String getSn() {
@@ -412,8 +382,8 @@ public class FastJsonProfile implements Bean {
 
     @Override
     public String toString() {
-        return "FastJsonProfile{" +
-                "key=" + key +
+        return "HibernateProfile{" +
+                "stringId='" + stringId + '\'' +
                 ", sn='" + sn + '\'' +
                 ", givenName='" + givenName + '\'' +
                 ", initials='" + initials + '\'' +
@@ -441,7 +411,7 @@ public class FastJsonProfile implements Bean {
                 ", motd='" + motd + '\'' +
                 ", profession='" + profession + '\'' +
                 ", jobTitle='" + jobTitle + '\'' +
-                ", maritalStatus='" + maritalStatus + '\'' +
+                ", maritalStatus=" + maritalStatus +
                 ", stateOfHealth='" + stateOfHealth + '\'' +
                 ", rank=" + rank +
                 ", remark='" + remark + '\'' +

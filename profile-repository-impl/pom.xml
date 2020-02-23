@@ -111,11 +111,11 @@
         <!-- 程序自身模块 -->
         <dependency>
             <groupId>com.dwarfeng</groupId>
-            <artifactId>rabc-weapon-rack-stack</artifactId>
+            <artifactId>profile-repository-stack</artifactId>
         </dependency>
         <dependency>
             <groupId>com.dwarfeng</groupId>
-            <artifactId>rabc-weapon-rack-sdk</artifactId>
+            <artifactId>profile-repository-sdk</artifactId>
         </dependency>
     </dependencies>
 

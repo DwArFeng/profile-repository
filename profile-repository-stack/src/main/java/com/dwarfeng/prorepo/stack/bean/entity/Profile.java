@@ -156,7 +156,7 @@ public class Profile implements Entity<StringIdKey> {
     /**
      * 婚姻状况。
      */
-    private String maritalStatus;
+    private byte maritalStatus;
 
     /**
      * 健康状况。
@@ -181,7 +181,7 @@ public class Profile implements Entity<StringIdKey> {
             String wwwHomepage, String email, String country, String province, String city, String street,
             String consigneeAddress, String faxNumber, String identityCardNumber, byte identityCardType, int birthYear,
             int birthMonth, int birthDay, byte gender, String bankAccount, byte bloodType, byte ebg, String strongPoint,
-            String hobby, String motd, String profession, String jobTitle, String maritalStatus, String stateOfHealth,
+            String hobby, String motd, String profession, String jobTitle, byte maritalStatus, String stateOfHealth,
             byte rank, String remark) {
         this.key = key;
         this.sn = sn;
@@ -443,11 +443,11 @@ public class Profile implements Entity<StringIdKey> {
         this.jobTitle = jobTitle;
     }
 
-    public String getMaritalStatus() {
+    public byte getMaritalStatus() {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(String maritalStatus) {
+    public void setMaritalStatus(byte maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
