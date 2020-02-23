@@ -1,7 +1,7 @@
 package com.dwarfeng.prorepo.impl.service;
 
 import com.dwarfeng.prorepo.stack.bean.entity.Profile;
-import com.dwarfeng.prorepo.stack.service.ProfileService;
+import com.dwarfeng.prorepo.stack.service.ProfileMaintainService;
 import com.dwarfeng.subgrade.impl.service.DaoOnlyPresetLookupService;
 import com.dwarfeng.subgrade.impl.service.GeneralCrudService;
 import com.dwarfeng.subgrade.sdk.interceptor.analyse.BehaviorAnalyse;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProfileServiceImpl implements ProfileService {
+public class ProfileMaintainServiceImpl implements ProfileMaintainService {
 
     @Autowired
     private GeneralCrudService<StringIdKey, Profile> crudService;

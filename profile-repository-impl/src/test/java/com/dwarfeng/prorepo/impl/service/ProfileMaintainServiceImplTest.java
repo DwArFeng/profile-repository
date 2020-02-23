@@ -3,7 +3,7 @@ package com.dwarfeng.prorepo.impl.service;
 import com.dwarfeng.prorepo.stack.bean.entity.Profile;
 import com.dwarfeng.prorepo.stack.cache.ProfileCache;
 import com.dwarfeng.prorepo.stack.dao.ProfileDao;
-import com.dwarfeng.prorepo.stack.service.ProfileService;
+import com.dwarfeng.prorepo.stack.service.ProfileMaintainService;
 import com.dwarfeng.subgrade.stack.bean.key.StringIdKey;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.After;
@@ -18,10 +18,10 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/application-context*.xml")
-public class ProfileServiceImplTest {
+public class ProfileMaintainServiceImplTest {
 
     @Autowired
-    private ProfileService service;
+    private ProfileMaintainService service;
     @Autowired
     private ProfileDao dao;
     @Autowired

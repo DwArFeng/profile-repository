@@ -11,5 +11,5 @@ import com.dwarfeng.subgrade.stack.service.PresetLookupService;
  * @author DwArFeng
  * @since alpha-0.0.1
  */
-public interface ProfileService extends CrudService<StringIdKey, Profile>, PresetLookupService<Profile> {
+public interface ProfileMaintainService extends CrudService<StringIdKey, Profile>, PresetLookupService<Profile> {
 }
