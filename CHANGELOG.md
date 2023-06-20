@@ -34,8 +34,12 @@
   - 升级 `dutil` 依赖版本为 `beta-0.3.2.a` 以规避漏洞。
   - 升级 `subgrade` 依赖版本为 `1.3.3.a` 以规避漏洞。
 
+- 优化配置文件。
+  - 优化 `application-context-xxx.xml`，使得更多属性可以在配置文件中配置。
+
 - 优化文件格式。
   - 优化 `pom.xml` 文件的格式。
+  - 优化 `application-context-xxx.xml` 文件的格式。
 
 #### Bug修复
 
