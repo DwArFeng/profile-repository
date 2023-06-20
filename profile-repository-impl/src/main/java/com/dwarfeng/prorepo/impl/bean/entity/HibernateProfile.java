@@ -12,7 +12,7 @@ import java.util.Optional;
 @Table(name = "tbl_profile")
 public class HibernateProfile implements Bean {
 
-    private static final long serialVersionUID = -647610156940290188L;
+    private static final long serialVersionUID = -2332608358648034263L;
 
     // -----------------------------------------------------------主键-----------------------------------------------------------
     @Id
@@ -107,7 +107,7 @@ public class HibernateProfile implements Bean {
     @Column(name = "state_of_health", columnDefinition = "VARCHAR(" + ProfileConstraints.STATE_OF_HEALTH_LENGTH + ")")
     private String stateOfHealth;
 
-    @Column(name = "rank")
+    @Column(name = "column_rank")
     private Byte rank;
 
     @Column(name = "remark", columnDefinition = "VARCHAR(" + ProfileConstraints.REMARK_LENGTH + ")")
@@ -382,39 +382,38 @@ public class HibernateProfile implements Bean {
 
     @Override
     public String toString() {
-        return "HibernateProfile{" +
-                "stringId='" + stringId + '\'' +
-                ", sn='" + sn + '\'' +
-                ", givenName='" + givenName + '\'' +
-                ", initials='" + initials + '\'' +
-                ", displayName='" + displayName + '\'' +
-                ", telephoneNumber='" + telephoneNumber + '\'' +
-                ", wwwHomepage='" + wwwHomepage + '\'' +
-                ", email='" + email + '\'' +
-                ", country='" + country + '\'' +
-                ", province='" + province + '\'' +
-                ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                ", consigneeAddress='" + consigneeAddress + '\'' +
-                ", faxNumber='" + faxNumber + '\'' +
-                ", identityCardNumber='" + identityCardNumber + '\'' +
-                ", identityCardType=" + identityCardType +
-                ", birthYear=" + birthYear +
-                ", birthMonth=" + birthMonth +
-                ", birthDay=" + birthDay +
-                ", gender=" + gender +
-                ", bankAccount='" + bankAccount + '\'' +
-                ", bloodType=" + bloodType +
-                ", ebg=" + ebg +
-                ", strongPoint='" + strongPoint + '\'' +
-                ", hobby='" + hobby + '\'' +
-                ", motd='" + motd + '\'' +
-                ", profession='" + profession + '\'' +
-                ", jobTitle='" + jobTitle + '\'' +
-                ", maritalStatus=" + maritalStatus +
-                ", stateOfHealth='" + stateOfHealth + '\'' +
-                ", rank=" + rank +
-                ", remark='" + remark + '\'' +
-                '}';
+        return getClass().getSimpleName() + "(" +
+                "stringId = " + stringId + ", " +
+                "sn = " + sn + ", " +
+                "givenName = " + givenName + ", " +
+                "initials = " + initials + ", " +
+                "displayName = " + displayName + ", " +
+                "telephoneNumber = " + telephoneNumber + ", " +
+                "wwwHomepage = " + wwwHomepage + ", " +
+                "email = " + email + ", " +
+                "country = " + country + ", " +
+                "province = " + province + ", " +
+                "city = " + city + ", " +
+                "street = " + street + ", " +
+                "consigneeAddress = " + consigneeAddress + ", " +
+                "faxNumber = " + faxNumber + ", " +
+                "identityCardNumber = " + identityCardNumber + ", " +
+                "identityCardType = " + identityCardType + ", " +
+                "birthYear = " + birthYear + ", " +
+                "birthMonth = " + birthMonth + ", " +
+                "birthDay = " + birthDay + ", " +
+                "gender = " + gender + ", " +
+                "bankAccount = " + bankAccount + ", " +
+                "bloodType = " + bloodType + ", " +
+                "ebg = " + ebg + ", " +
+                "strongPoint = " + strongPoint + ", " +
+                "hobby = " + hobby + ", " +
+                "motd = " + motd + ", " +
+                "profession = " + profession + ", " +
+                "jobTitle = " + jobTitle + ", " +
+                "maritalStatus = " + maritalStatus + ", " +
+                "stateOfHealth = " + stateOfHealth + ", " +
+                "rank = " + rank + ", " +
+                "remark = " + remark + ")";
     }
 }
