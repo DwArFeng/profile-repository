@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dwarfeng</groupId>
@@ -15,7 +19,7 @@
 
     <properties>
         <!-- 进行工程编码声明 -->
-        <!-- 进行JDK版本声明 -->
+        <!-- 进行 JDK 版本声明 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -53,7 +57,7 @@
         <dozer.version>5.5.1</dozer.version>
         <dutil.version>beta-0.2.1.a-SNAPSHOT</dutil.version>
         <subgrade.version>beta-0.2.4.a</subgrade.version>
-        <!-- Maven插件版本声明 -->
+        <!-- Maven 插件版本声明 -->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
@@ -64,7 +68,7 @@
     <!-- 只定义依赖的版本，并不实际依赖 -->
     <dependencyManagement>
         <dependencies>
-            <!-- AspectJ组件 -->
+            <!-- AspectJ 组件 -->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
@@ -75,7 +79,7 @@
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper.version}</version>
             </dependency>
-            <!-- Apache工具组件 -->
+            <!-- Apache 工具组件 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -91,13 +95,13 @@
                 <artifactId>commons-net</artifactId>
                 <version>${commons-net.version}</version>
             </dependency>
-            <!-- FastJson Json处理工具包 -->
+            <!-- FastJson Json 处理工具包 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastJson.version}</version>
             </dependency>
-            <!-- Dubbo分布式包 -->
+            <!-- Dubbo 分布式包 -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
@@ -110,13 +114,13 @@
                 </exclusions>
                 <version>${dubbo.version}</version>
             </dependency>
-            <!-- Netty网络连接包 -->
+            <!-- Netty 网络连接包 -->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
             </dependency>
-            <!-- Curator框架 -->
+            <!-- Curator 框架 -->
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-recipes</artifactId>
@@ -140,13 +144,13 @@
                 <artifactId>log4j-core</artifactId>
                 <version>${log4j2.version}</version>
             </dependency>
-            <!-- MySql连接器 -->
+            <!-- MySql 连接器 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- Druid连接池 -->
+            <!-- Druid 连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -208,19 +212,19 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!-- Redis客户端 -->
+            <!-- Redis 客户端 -->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
             </dependency>
-            <!-- solr客户端 -->
+            <!-- Solr 客户端 -->
             <dependency>
                 <groupId>org.apache.solr</groupId>
                 <artifactId>solr-solrj</artifactId>
                 <version>${solrj.version}</version>
             </dependency>
-            <!-- zookeeper客户端 -->
+            <!-- Zookeeper 客户端 -->
             <dependency>
                 <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
@@ -246,25 +250,25 @@
                 <artifactId>httpcore</artifactId>
                 <version>${httpcomponents.version}</version>
             </dependency>
-            <!-- hibernate组件 -->
+            <!-- Hibernate 组件 -->
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
-            <!-- Hibernate验证器 -->
+            <!-- Hibernate 验证器 -->
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
             </dependency>
-            <!-- EL组件 -->
+            <!-- EL 组件 -->
             <dependency>
                 <groupId>org.glassfish</groupId>
                 <artifactId>javax.el</artifactId>
                 <version>${el.version}</version>
             </dependency>
-            <!-- Dozer模块 -->
+            <!-- Dozer 模块 -->
             <dependency>
                 <groupId>net.sf.dozer</groupId>
                 <artifactId>dozer</artifactId>
@@ -275,7 +279,7 @@
                 <artifactId>dozer-spring</artifactId>
                 <version>${dozer.version}</version>
             </dependency>
-            <!-- dutil组件 -->
+            <!-- Dutil 组件 -->
             <dependency>
                 <groupId>com.dwarfeng</groupId>
                 <artifactId>dutil-basic</artifactId>
@@ -286,7 +290,7 @@
                 <artifactId>dutil-develop</artifactId>
                 <version>${dutil.version}</version>
             </dependency>
-            <!-- subgrade组件 -->
+            <!-- Subgrade 组件 -->
             <dependency>
                 <groupId>com.dwarfeng</groupId>
                 <artifactId>subgrade-stack</artifactId>
@@ -301,6 +305,16 @@
                 <groupId>com.dwarfeng</groupId>
                 <artifactId>subgrade-impl</artifactId>
                 <version>${subgrade.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>mybatis</artifactId>
+                        <groupId>org.mybatis</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>mybatis-spring</artifactId>
+                        <groupId>org.mybatis</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- 程序自身组件 -->
             <dependency>
