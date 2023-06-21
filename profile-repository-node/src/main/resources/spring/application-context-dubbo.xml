@@ -24,5 +24,6 @@
     <dubbo:service
             interface="com.dwarfeng.prorepo.stack.service.ProfileMaintainService"
             ref="profileMaintainServiceImpl"
+            group="${dubbo.provider.group}"
     />
 </beans>
