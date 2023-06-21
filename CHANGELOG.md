@@ -4,6 +4,8 @@
 
 #### 功能构建
 
+- 使用 `spring-terminator` 重构项目的启停机制。
+
 - 使用 `MapStruct` 重构 `BeanTransformer`。
 
 - 插件升级。
@@ -17,6 +19,7 @@
   - 增加依赖 `snakeyaml` 以规避漏洞，版本为 `2.0`。
   - 增加依赖 `slf4j` 以应用其功能，版本为 `1.7.5`。
   - 增加依赖 `jboss-logging` 以应用其功能，版本为 `3.4.3.Final`。
+  - 增加依赖 `spring-terminator` 以应用其功能，版本为 `1.0.11.a`。
 
 - 依赖升级。
   - 升级 `junit` 依赖版本为 `4.13.2` 以规避漏洞。
