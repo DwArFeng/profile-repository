@@ -4,6 +4,12 @@
 
 #### 功能构建
 
+- 优化项目结构，增加项目目录。
+  - `./confext/`。
+  - `./libext/`。
+  - `./opt/`。
+  - `./optext/`。
+
 - 引入 `spring-telqos` 提供 telnet 运维平台。
 
 - 使用 `spring-terminator` 重构项目的启停机制。

@@ -52,11 +52,31 @@ buildNumber.properties
 #################
 ## Logger Files
 #################
-/profile-repository-node/logs/
 /profile-repository-impl/logs/
+/profile-repository-node/logs/
 
 #################
 ## Configuration Files
 #################
-/profile-repository-node/conf/
 /profile-repository-impl/conf/
+/profile-repository-node/conf/
+
+#################
+## Libext Files
+#################
+/profile-repository-node/libext/
+
+#################
+## Opt Files
+#################
+/profile-repository-node/opt/
+
+#################
+## Optext Files
+#################
+/profile-repository-node/optext/
+
+#################
+## Confext Files
+#################
+/profile-repository-node/confext/
