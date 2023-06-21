@@ -29,6 +29,11 @@
     </properties>
 
     <dependencies>
+        <!-- Spring-telqos 组件 -->
+        <dependency>
+            <groupId>com.dwarfeng</groupId>
+            <artifactId>spring-telqos-api</artifactId>
+        </dependency>
         <!-- 程序自身组件 -->
         <dependency>
             <groupId>com.dwarfeng</groupId>
