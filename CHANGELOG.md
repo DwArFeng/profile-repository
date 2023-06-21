@@ -4,6 +4,8 @@
 
 #### 功能构建
 
+- 使用 `MapStruct` 重构 `BeanTransformer`。
+
 - 插件升级。
   - 升级 `maven-deploy-plugin` 插件版本为 `2.8.2`。
 
